@@ -1,0 +1,305 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WS23</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+</style>
+</head>
+<body>
+  <div>
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="display: inline;">
+        <a class="nav-link1">Delivery Time</a>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="display: inline;">
+        <input id="search-input"
+			       type="search"
+			       class="search-input"
+			       placeholder="Search for products..."/>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="display: inline;">
+        <a class="nav-link2">Account</a>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="display: inline;">
+        <a><i class="bi bi-cart3"></i></a>
+      </div>
+    </div>
+  </div>
+  <header id="header">
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li class="navB"><a>Home</a></li>
+        <li class="navB"><a>Red</a></li>
+        <li class="navB"><a>White</a></li>
+        <li class="navB"><a>Rose</a></li>
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+              <a href="#">Home</a>
+              <a href="#">Red</a>
+              <a href="#">White</a>
+              <a href="#">Rose</a>
+              <a href="#">Spirits</a>
+              <a href="#">Other</a>
+              <a href="#">Special</a>
+              <a href="#">Member</a>
+          </div>
+          </div>
+          <span class="iconD" style="font-size:30px;cursor:pointer; color: aliceblue;" onclick="openNav()">&#9776;</span>
+        <!-- <li class="mobileNav"><a><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAAcUlEQVRoge3WMQqAMBBE0Ynn0APpOQSPvSB4jrESJJ0S3Aj/delmU30JAIBGbC+2w/0L2/N9e6kO2SVNn/7ee0cpZbweQ+aSlupDNkmRMeShkLRmjwAAAHjCZHwKMr4nZDwAAPgdk/EpyPiekPEAgKZOXxkfuKeEKc0AAAAASUVORK5CYII=" style="height: 4vh; cursor: pointer;"></a></li> -->
+        <li class="col-md-2 text-center">
+          <a>
+            <img src="images/logo.png" class="logo">
+          </a>
+        </li>
+        <li class="mobileNav"><a><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAACKklEQVRoge2YvW4TQRRGvzEESBFBkQZBxV+FiPipyBuAhO2CV4kooQnwJpQOzxDRAEEUFGRDBYISsEgBmByKWQe0Ep7ZmbveiOxpPXfmfOv1zB1LHR2HG2c5GbAgaSBpKOmapLPlRx8kvZQ0kjRyzv20XNcEYAgUhCmAQdu++wA94HGEeJWHQK9tfyXK74doW36YIT+l35b8AnHvfIh3wLFUj5x3cCDpQkb9lHOS7qQW5wQYZtRWSd6VcgLcyKg1mysnwOmM2ipnUgvb34c9e6mFOQE+ZtSazZUT4EVGbZXnqYU5AUYZtVWeGs4VR3mQbRscZG/xXez8AQaZ8ntA8iFmFeJRRoD1VuXLAD18a1z3ya9zENrpKUCfuN/ENoavTRNXyr58b3Ndf66U7+WvlBuSNg7klbKj438GWAQeADvApOaWWYdJucZ9YNFSfrNB6X+xCZwI+cUcJPckreY/itqsSloLDQqeA8COpPMWRgkUzrlLswbEBJhIOmKmVI9fzrmjswbEvEJt9ivBtWPkvhqIpPI5NCAmwCsDkVSCa8cEeGIgkkpw7Zgf8XFJbzT/naiQdNk592PWoOA34Jz7Lt8ij43EYvgm6W5IvhbAbWB3DifwLnDLTLwSYgXfqzRFAVxpRP6vEEv4ZmtsKD4u51xqVL4SZBlYA7YyxLfKOZZTPUzuxMBFSTclXZW0Iv/P9SlJJ8shX+QPxE+SXsvv78+cc4XF+h0dh5nfdHImf3cKcHYAAAAASUVORK5CYII=" style="height: 4vh; cursor: pointer;"></a></li>
+        <li class="navB"><a>Spirits</a></li>
+        <li class="navB"><a>Other</a></li>
+        <li class="navB"><a>Special</a></li>
+        <li class="navB"><a>Member</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <br>
+          <h1 class="firsth1">Carlo Rossi Cabernet Sauvignon</h1>
+          <div class="content">
+            <p>This California Cabernet Sauvignon is a big, bold wine that nudges toward the taste of red cherry and blackberry. Great with steaks and pork dishes. Known as the king of red wine grapes, Cabernet Sauvignon enjoys the same regal status in California as does in its native home in Bordeaux.</p>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <img id="image-bottle" src="images/bottle.png"/>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+          <table>
+            <tbody>
+              <tr>
+                <th scope="row" colspan="2">
+                  <h2 style="font-size: 2rem;"><span>Rs. 2,320.00</span></h2>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2" style="font-size: 1.8rem;">
+                <span><a>Carlo Rossi</a></span>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row" style="font-size: 24px; width: 25vh;"><span><a>750 ML</a></span>
+                </th>
+                <td rowspan="2">
+                  <h4>Qty</h4>
+                  <form class="quantityBtn">
+                    <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                    <input type="number" id="number" max="1" max="5" value="1" />
+                    <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                  </form>
+                  <button id ="buynow" type="submit">
+                    Buy Now
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" style="font-size: 24px;">
+                  Alcohol : <span><a>13.5%</a></span>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2" style="font-size: 1.2rem;">
+                  <div>
+                    <a class="details">California </a>
+                    <a class="details"> Carlo Rossi </a>
+                    <a> Red wine</a>
+                  </div>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background: #000;">
+    <div class="row">
+      <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="container">
+          <h1 class="secondh1" style="width: 25%">You May Like</h1>
+          <p class="para2">Raise a glass to our simple cocktail recipes! We have all manner of martinis, mojitos, gin drinks and more that are quick and easy to make when your're entertaining.</p>
+        </div>
+      </div>
+      <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+          <div class="row">
+            <div class="card-columns imagesset">
+                <div class="col-md-12" id="set1" >
+                  <img width="280" height="160" src="images/i1.jpg"/>
+                  <a><h5 class="card-title">Top 7 foods to pair with whisky</h5></a>
+                </div>
+                <div class="col-md-12" id="set2">
+                  <img width="280" height="160" src="images/i2.jpg"/>
+                  <a><h5 class="card-title">Wine pairing basics</h5></a>
+                </div>
+                <div class="col-md-12" id="set3">
+                  <img width="280" height="160" src="images/i3.jpg"/>
+                  <a><h5 class="card-title">Sweet Dessert Whiskey Sauce</h5></a>
+                </div>
+          </div>
+      </div>
+    </div>
+    <br><br/>
+  </div>
+  <footer>
+    <div class="row">
+      <div id="footer-section01" class="col-md-4">
+        <div class="col-md-12">
+          <h2 style="font-size: 32px; font-weight: 600; font-family: 'Cinzel', serif; color: #fff">
+            WS23 Community
+          </h2>
+          <a><img src="images/ws23-facebook.png" style="width: 36px;"></a>
+          <a><img src="images/ws23-instagram.png" style="width: 36px;"></a>
+          <a><img src="images/ws23-youtube.png" style="width: 36px;"></a>
+        </div>
+        <div class="col-md-12">
+          <h2 style="font-size: 24px; font-weight: 100; font-family: 'Cinzel', serif; color: #fff">
+            Call Us
+          </h2>
+          <p style="color: #fff;">
+            <a style="color: #fff;">+94 77 36 00 700</a>
+            <br>
+            <a style="color: #fff;">+94 766 23 23 23</a>
+            <br>
+            <medium>10:00 AM - 9:00 PM</medium>
+          </p>
+        </div>
+        <br>
+        <div class="col-md-12">
+          <h2 style="font-size: 24px; font-weight: 100; font-family: 'Cinzel', serif; color: #fff">
+            Find Us
+          </h2>
+          <p style="color: #fff;">
+            <a style="color: #fff">
+              No. 250/36, Ground Floor, Liberty Plaza, <br>
+              Colombo 03, Sri Lanka
+            </a>
+          </p>
+        </div>
+        <div class="col-md-12">
+          <h2 style="font-size: 24px; font-weight: 100; font-family: 'Cinzel', serif; color: #fff">
+            Free Lanka Group
+          </h2>
+          <a href="#" target="_blank">
+            <img src="images/free-lanka-group.png" style="width: 50px;">
+          </a>
+        </div>
+        <div class="col-md-12">
+          <h2 style="font-size: 24px; font-weight: 100; font-family: 'Cinzel', serif; color: #fff">
+            Important Links
+          </h2>
+          <p>
+            <a style="color: #fff">Privacy Policy</a> <br>
+            <a style="color: #fff">How to Order</a> <br>
+            <a style="color: #fff">Returns and Refunds</a>
+          </p>
+        </div>
+      </div>
+      <div id="footer-section02" class="col-md-4">
+        <div class="text-center" style="color: #fff;">
+          <p>
+            #ws23 <br>
+            #enjoy <br>
+            #drinkresponsibly <br>
+            #goodtimesgoodfriends
+          </p>
+        </div>
+      </div>
+      <div id="footer-section03" class="col-md-4">
+        <form class="contact-us">
+          <div class="row">
+            <h2 style="font-size: 32px; font-weight: 600; font-family: 'Cinzel', serif; color: #fff">
+                Contact WS23
+            </h2>
+          </div>
+          <div class="row">
+            <div class="labels">
+              <label for="name">Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="name">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="labels">
+              <label for="email">Email Address</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="email">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="labels">
+              <label for="phone">Phone Number</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="phone">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="labels">
+              <label for="message">Message</label>
+            </div>
+            <div class="col-75">
+              <textarea id="message"></textarea>
+            </div>
+          </div>
+          <br><br/>
+          <div class="row">
+            <input type="submit" value="Send">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="rights" class="col-md-12">
+      <p>&copy; 2022 Free Lanka Trading Company (Pvt) Ltd. All rights reserved.<br>
+        <small>Designed Developed & Maintained by <a style="color: #fff">IF Solutions</a></small><br>
+      </p>
+    </div>
+  </footer>
+  <script>
+    function increaseValue() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('number').value = value;
+    }
+    function decreaseValue() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value < 1 ? value = 1 : '';
+      value--;
+      document.getElementById('number').value = value;
+    }
+    function openNav() {
+    document.getElementById("myNav").style.display = "block";
+    }
+
+    function closeNav() {
+    document.getElementById("myNav").style.display = "none";
+    } 
+ </script>
+</body>
+</html>
